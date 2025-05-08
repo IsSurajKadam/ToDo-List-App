@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Todo List</h1>
+      <div class="input-section">
+        <input
+          type="text"
+          class="task-input"
+          placeholder="Add new task..."
+          id="taskInput"
+        />
+        <input type="date" class="task-input" id="dueDate" />
+        <select class="priority-select" id="priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button class="add-btn" onclick="addTask()">
+          <i class="fas fa-plus"></i> Add Task
+        </button>
+      </div>
+      <div class="filter-section">
+        <button class="filter-btn active" onclick="filterTasks('all')">
+          All
+        </button>
+        <button class="filter-btn" onclick="filterTasks('high')">High</button>
+        <button class="filter-btn" onclick="filterTasks('medium')">
+          Medium
+        </button>
+        <button class="filter-btn" onclick="filterTasks('low')">Low</button>
+        <button class="filter-btn" onclick="filterTasks('completed')">
+          Completed
+        </button>
+      </div>
+      <ul class="task-list" id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
